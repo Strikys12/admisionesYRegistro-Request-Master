@@ -1,75 +1,222 @@
 package requests.models;
 
+import java.time.LocalDate; //Importamos la clase LocalDate para manipular datos con fechas esto nos permite evitar errores de formato y realizar operaciones con fechas más eficientes
+import java.util.List;
 
 public class Request {
+    // PRIMARY KEY
+    private int id_solicitud;
 
-    private String name;
-    private String id;
-    private String email;
-    private String numberCellphone;
-    private boolean status;
+    // INFORMACIÓN DE IDENTIFICACIÓN
+    private String numeroDocumento;
+    private String primerApellido;
+    private String segundoApellido;
+    private String nombre;
 
+    // INFORMACIÓN DE NACIMIENTO
+    private String municipioNacimiento;
+    private LocalDate fechaDeNacimiento;
 
+    // INFORMACIÓN DE RESIDENCIA ACTUAL Y CONTACTO
+    private String municipioResidencia;
+    private String direccion;
+    private String numeroContacto;
+    private int estrato;
+    private String correoElectronico;
 
-    //Constructores
+    // Información del título de Secundaria
+    private String nombreInstitucion;
+    private LocalDate anoTitulo;
 
-    public Request(){
+    // Otra información
+    private String genero;
+    private String estadoCivil;
+
+    // Programas a los cuales aspira
+    private List<String> programasOpciones;
+
+    // Constructores
+
+    public Request() {
 
     }
 
-    public Request(String name, String id, String email, String numberCellphone, boolean status){
-        this.name =  name;
-        this.id = id;
-        this.email = email;
-        this.numberCellphone = numberCellphone;
-        this.status = status;
-        
+    public Request(
+            int id_solicitud,
+            String numeroDocumento,
+            String primerApellido,
+            String segundoApellido,
+            String nombre,
+            String municipioNacimiento,
+            LocalDate fechaDeNacimiento,
+            String municipioResidencia,
+            String direccion,
+            String numeroContacto,
+            int estrato,
+            String correoElectronico,
+            String nombreInstitucion,
+            LocalDate anoTitulo,
+            String genero,
+            String estadoCivil,
+            List<String> programasOpciones) {
+
+        this.id_solicitud = id_solicitud;
+        this.primerApellido = primerApellido;
+        this.numeroDocumento = numeroDocumento;
+        this.segundoApellido = segundoApellido;
+        this.nombre = nombre;
+        this.municipioNacimiento = municipioNacimiento;
+        this.fechaDeNacimiento = fechaDeNacimiento;
+        this.municipioResidencia = municipioResidencia;
+        this.direccion = direccion;
+        this.numeroContacto = numeroContacto;
+        this.estrato = estrato;
+        this.correoElectronico = correoElectronico;
+        this.nombreInstitucion = nombreInstitucion;
+        this.anoTitulo = anoTitulo;
+        this.genero = genero;
+        this.estadoCivil = estadoCivil;
+        this.programasOpciones = programasOpciones;
+
     }
 
-    
-
-    //SETTERS//
-
-    public void setName(String name) {
-        this.name = name;
+    // SETTERS//
+    public void setId_solicitud(int id_solicitud) {
+        this.id_solicitud = id_solicitud;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setNumeroDocumento(String numeroDocumento) {
+        this.numeroDocumento = numeroDocumento;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setPrimerApellido(String primerApellido) {
+        this.primerApellido = primerApellido;
     }
 
-    public void setNumberCellphone(String numberCellphone) {
-        this.numberCellphone = numberCellphone;
+    public void setSegundoApellido(String segundoApellido) {
+        this.segundoApellido = segundoApellido;
     }
 
-    
-
-    //GETTERS//
-
-    public String getName() {
-        return name;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getId() {
-        return id;
+    public void setMunicipioNacimiento(String municipioNacimiento) {
+        this.municipioNacimiento = municipioNacimiento;
     }
 
-    public String getEmail() {
-        return email;
+    public void setFechaDeNacimiento(LocalDate fechaDeNacimiento) {
+        this.fechaDeNacimiento = fechaDeNacimiento;
     }
 
-    public String getNumberCellphone() {
-        return numberCellphone;
+    public void setMunicipioResidencia(String municipioResidencia) {
+        this.municipioResidencia = municipioResidencia;
     }
 
-    
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
 
-    
+    public void setNumeroContacto(String numeroContacto) {
+        this.numeroContacto = numeroContacto;
+    }
 
+    public void setEstrato(int estrato) {
+        this.estrato = estrato;
+    }
 
-    
-} 
+    public void setCorreoElectronico(String correoElectronico) {
+        this.correoElectronico = correoElectronico;
+    }
+
+    public void setNombreInstitucion(String nombreInstitucion) {
+        this.nombreInstitucion = nombreInstitucion;
+    }
+
+    public void setAnoTitulo(LocalDate anoTitulo) {
+        this.anoTitulo = anoTitulo;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public void setEstadoCivil(String estadoCivil) {
+        this.estadoCivil = estadoCivil;
+    }
+
+    public void setProgramasOpciones(List<String> programasOpciones) {
+        this.programasOpciones = programasOpciones;
+    }
+
+    // GETTERS//
+
+    public int getId_solicitud() {
+        return id_solicitud;
+    }
+
+    public String getNumeroDocumento() {
+        return numeroDocumento;
+    }
+
+    public String getPrimerApellido() {
+        return primerApellido;
+    }
+
+    public String getSegundoApellido() {
+        return segundoApellido;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getMunicipioNacimiento() {
+        return municipioNacimiento;
+    }
+
+    public LocalDate getFechaDeNacimiento() {
+        return fechaDeNacimiento;
+    }
+
+    public String getMunicipioResidencia() {
+        return municipioResidencia;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public String getNumeroContacto() {
+        return numeroContacto;
+    }
+
+    public int getEstrato() {
+        return estrato;
+    }
+
+    public String getCorreoElectronico() {
+        return correoElectronico;
+    }
+
+    public String getNombreInstitucion() {
+        return nombreInstitucion;
+    }
+
+    public LocalDate getAnoTitulo() {
+        return anoTitulo;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public String getEstadoCivil() {
+        return estadoCivil;
+    }
+
+    public List<String> getProgramasOpciones() {
+        return programasOpciones;
+    }
+
+}
