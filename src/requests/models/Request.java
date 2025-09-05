@@ -4,45 +4,43 @@ import java.time.LocalDate; //Importamos la clase LocalDate para manipular datos
 import java.util.List;
 
 public class Request {
-    // PRIMARY KEY
-    private int id_solicitud;
+  
+    // ID de solicitud
+    private final int idSolicitud;
 
     // INFORMACIÓN DE IDENTIFICACIÓN
-    private String numeroDocumento;
-    private String primerApellido;
-    private String segundoApellido;
-    private String nombre;
+    private final String numeroDocumento;
+    private final String primerApellido;
+    private final String segundoApellido;
+    private final String nombre;
 
     // INFORMACIÓN DE NACIMIENTO
-    private String municipioNacimiento;
-    private LocalDate fechaDeNacimiento;
+    private final String municipioNacimiento;
+    private final LocalDate fechaDeNacimiento;
 
     // INFORMACIÓN DE RESIDENCIA ACTUAL Y CONTACTO
-    private String municipioResidencia;
-    private String direccion;
-    private String numeroContacto;
-    private int estrato;
-    private String correoElectronico;
+    private final String municipioResidencia;
+    private final String direccion;
+    private final String numeroContacto;
+    private final int estrato;
+    private final String correoElectronico;
 
     // Información del título de Secundaria
-    private String nombreInstitucion;
-    private LocalDate anoTitulo;
+    private final String nombreInstitucion;
+    private final LocalDate anoTitulo;
 
     // Otra información
-    private String genero;
-    private String estadoCivil;
+    private final String genero;
+    private final String estadoCivil;
 
     // Programas a los cuales aspira
-    private List<String> programasOpciones;
+    private final List<String> programasOpciones;
 
     // Constructores
 
-    public Request() {
-
-    }
 
     public Request(
-            int id_solicitud,
+            int idSolicitud,
             String numeroDocumento,
             String primerApellido,
             String segundoApellido,
@@ -60,7 +58,7 @@ public class Request {
             String estadoCivil,
             List<String> programasOpciones) {
 
-        this.id_solicitud = id_solicitud;
+        this.idSolicitud = idSolicitud;
         this.primerApellido = primerApellido;
         this.numeroDocumento = numeroDocumento;
         this.segundoApellido = segundoApellido;
@@ -81,78 +79,13 @@ public class Request {
     }
 
     // SETTERS//
-    public void setId_solicitud(int id_solicitud) {
-        this.id_solicitud = id_solicitud;
-    }
-
-    public void setNumeroDocumento(String numeroDocumento) {
-        this.numeroDocumento = numeroDocumento;
-    }
-
-    public void setPrimerApellido(String primerApellido) {
-        this.primerApellido = primerApellido;
-    }
-
-    public void setSegundoApellido(String segundoApellido) {
-        this.segundoApellido = segundoApellido;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setMunicipioNacimiento(String municipioNacimiento) {
-        this.municipioNacimiento = municipioNacimiento;
-    }
-
-    public void setFechaDeNacimiento(LocalDate fechaDeNacimiento) {
-        this.fechaDeNacimiento = fechaDeNacimiento;
-    }
-
-    public void setMunicipioResidencia(String municipioResidencia) {
-        this.municipioResidencia = municipioResidencia;
-    }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
-    public void setNumeroContacto(String numeroContacto) {
-        this.numeroContacto = numeroContacto;
-    }
-
-    public void setEstrato(int estrato) {
-        this.estrato = estrato;
-    }
-
-    public void setCorreoElectronico(String correoElectronico) {
-        this.correoElectronico = correoElectronico;
-    }
-
-    public void setNombreInstitucion(String nombreInstitucion) {
-        this.nombreInstitucion = nombreInstitucion;
-    }
-
-    public void setAnoTitulo(LocalDate anoTitulo) {
-        this.anoTitulo = anoTitulo;
-    }
-
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
-
-    public void setEstadoCivil(String estadoCivil) {
-        this.estadoCivil = estadoCivil;
-    }
-
-    public void setProgramasOpciones(List<String> programasOpciones) {
-        this.programasOpciones = programasOpciones;
-    }
-
+   
+    //Se omiten los setters por la seguridad de los datos ya que lo idela es que la mayoría no puedan ser modificados por eso asignamos la palabra final a los atributos.
+    
     // GETTERS//
 
-    public int getId_solicitud() {
-        return id_solicitud;
+    public int getIdSolicitud(){
+        return idSolicitud;
     }
 
     public String getNumeroDocumento() {
