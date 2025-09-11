@@ -6,38 +6,41 @@ import java.util.List;
 public class Request {
   
     // ID de solicitud
-    private final int idSolicitud;
+    private  int idSolicitud;
 
     // INFORMACIÓN DE IDENTIFICACIÓN
-    private final String numeroDocumento;
-    private final String primerApellido;
-    private final String segundoApellido;
-    private final String nombre;
+    private String numeroDocumento;
+    private String primerApellido;
+    private String segundoApellido;
+    private String nombre;
 
     // INFORMACIÓN DE NACIMIENTO
-    private final String municipioNacimiento;
-    private final LocalDate fechaDeNacimiento;
+    private String municipioNacimiento;
+    private LocalDate fechaDeNacimiento;
 
     // INFORMACIÓN DE RESIDENCIA ACTUAL Y CONTACTO
-    private final String municipioResidencia;
-    private final String direccion;
-    private final String numeroContacto;
-    private final int estrato;
-    private final String correoElectronico;
+    private String municipioResidencia;
+    private String direccion;
+    private String numeroContacto;
+    private int estrato;
+    private String correoElectronico;
 
     // Información del título de Secundaria
-    private final String nombreInstitucion;
-    private final LocalDate anoTitulo;
+    private String nombreInstitucion;
+    private LocalDate anoTitulo;
 
     // Otra información
-    private final String genero;
-    private final String estadoCivil;
+    private  String genero;
+    private  String estadoCivil;
 
     // Programas a los cuales aspira
-    private final List<String> programasOpciones;
+    private  List<String> programasOpciones;
 
     // Constructores
 
+    public Request(){
+
+    }
 
     public Request(
             int idSolicitud,
@@ -78,10 +81,7 @@ public class Request {
 
     }
 
-    // SETTERS//
-   
-    //Se omiten los setters por la seguridad de los datos ya que lo idela es que la mayoría no puedan ser modificados por eso asignamos la palabra final a los atributos.
-    
+
     // GETTERS//
 
     public int getIdSolicitud(){
@@ -149,7 +149,77 @@ public class Request {
     }
 
     public List<String> getProgramasOpciones() {
+
         return programasOpciones;
     }
 
+    //SETTERS//
+    public void setNumeroDocumento(String numeroDocumento) {
+        this.numeroDocumento = numeroDocumento;
+    }
+
+    public void setPrimerApellido(String primerApellido) {
+        this.primerApellido = primerApellido;
+    }
+
+    public void setSegundoApellido(String segundoApellido) {
+        this.segundoApellido = segundoApellido;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setMunicipioNacimiento(String municipioNacimiento) {
+        this.municipioNacimiento = municipioNacimiento;
+    }
+
+    public void setFechaDeNacimiento(LocalDate fechaDeNacimiento) {
+        this.fechaDeNacimiento = fechaDeNacimiento;
+    }
+
+    public void setMunicipioResidencia(String municipioResidencia) {
+        this.municipioResidencia = municipioResidencia;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public void setNumeroContacto(String numeroContacto) {
+        this.numeroContacto = numeroContacto;
+    }
+
+    public void setEstrato(int estrato) {
+        this.estrato = estrato;
+    }
+
+    public void setCorreoElectronico(String correoElectronico) {
+        this.correoElectronico = correoElectronico;
+    }
+
+    public void setNombreInstitucion(String nombreInstitucion) {
+        this.nombreInstitucion = nombreInstitucion;
+    }
+
+    public void setAnoTitulo(LocalDate anoTitulo) {
+        this.anoTitulo = anoTitulo;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public void setEstadoCivil(String estadoCivil) {
+        this.estadoCivil = estadoCivil;
+    }
+
+    public void setProgramasOpciones(List<String> programasOpciones) {
+        this.programasOpciones = programasOpciones;
+    }
+
+    
 }
+
+
+
